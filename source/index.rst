@@ -1,9 +1,9 @@
-.. assignment1_rt2 documentation master file, created by
+.. assignment_2_2022 documentation master file, created by
    sphinx-quickstart on Sat Jun  3 16:42:20 2023.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to assignment1_rt2's documentation!
+Welcome to assignment_2_2022's documentation!
 ===========================================
 
 .. toctree::
@@ -21,10 +21,10 @@ Indices and tables
 
 
 
-assignment1_rt2 documentation!
+assignment_2_2022 documentation!
 *******************************
 
-This is the documentation of the assignment1_rt2 package!
+This is the documentation of the assignment_2_2022 package!
 
 
 
