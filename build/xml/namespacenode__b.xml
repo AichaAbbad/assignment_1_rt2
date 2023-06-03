@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="namespacenode__b" kind="namespace" language="Python">
+    <compoundname>node_b</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacenode__b_1a157c11e4259dd02a2498d2941cd6fc4e" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int node_b.reached_goals</definition>
+        <argsstring></argsstring>
+        <name>reached_goals</name>
+        <initializer>=  0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/abbad/Documents/unige/researchtrack/rt2/assignment_2_2022/src/assignment_2_2022/scripts/node_b.py" line="29" column="1" bodyfile="/home/abbad/Documents/unige/researchtrack/rt2/assignment_2_2022/src/assignment_2_2022/scripts/node_b.py" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacenode__b_1a199d07f6092f5134dac96620ad3eb115" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int node_b.canceled_goals</definition>
+        <argsstring></argsstring>
+        <name>canceled_goals</name>
+        <initializer>=  0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/abbad/Documents/unige/researchtrack/rt2/assignment_2_2022/src/assignment_2_2022/scripts/node_b.py" line="32" column="1" bodyfile="/home/abbad/Documents/unige/researchtrack/rt2/assignment_2_2022/src/assignment_2_2022/scripts/node_b.py" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacenode__b_1a6e2b08c821278aa0fe1e92dd83a7f310" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>node_b.service</definition>
+        <argsstring></argsstring>
+        <name>service</name>
+        <initializer>=  rospy.Service(&quot;reach_cancel&quot;, Empty, <ref refid="namespacenode__b_1a052d2a0326697e5c473d4dc9e4848e01" kindref="member">srv_callback</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/abbad/Documents/unige/researchtrack/rt2/assignment_2_2022/src/assignment_2_2022/scripts/node_b.py" line="83" column="1" bodyfile="/home/abbad/Documents/unige/researchtrack/rt2/assignment_2_2022/src/assignment_2_2022/scripts/node_b.py" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacenode__b_1a47cbdef551028f153f5457ceb6b74c25" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>node_b.subscribe</definition>
+        <argsstring></argsstring>
+        <name>subscribe</name>
+        <initializer>=  rospy.Subscriber(&apos;/reaching_goal/result&apos;, assignment_2_2022.msg.PlanningActionResult, <ref refid="namespacenode__b_1ab1613d9ff25c6970f8d29a118504152d" kindref="member">sub_callback</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/abbad/Documents/unige/researchtrack/rt2/assignment_2_2022/src/assignment_2_2022/scripts/node_b.py" line="86" column="1" bodyfile="/home/abbad/Documents/unige/researchtrack/rt2/assignment_2_2022/src/assignment_2_2022/scripts/node_b.py" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacenode__b_1ab1613d9ff25c6970f8d29a118504152d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def node_b.sub_callback</definition>
+        <argsstring>(data)</argsstring>
+        <name>sub_callback</name>
+        <param>
+          <type>data</type>
+          <defname>data</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>    *sub_callbacl()* is a callback function that checks the status of the robot
+    to see if the robot reached its goaled or if is cancelled.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/abbad/Documents/unige/researchtrack/rt2/assignment_2_2022/src/assignment_2_2022/scripts/node_b.py" line="38" column="1" bodyfile="/home/abbad/Documents/unige/researchtrack/rt2/assignment_2_2022/src/assignment_2_2022/scripts/node_b.py" bodystart="38" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacenode__b_1a052d2a0326697e5c473d4dc9e4848e01" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def node_b.srv_callback</definition>
+        <argsstring>(req)</argsstring>
+        <name>srv_callback</name>
+        <param>
+          <type>req</type>
+          <defname>req</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>    *srv_callback()* is a service callback function that returns the number or reached and canceled goals.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/abbad/Documents/unige/researchtrack/rt2/assignment_2_2022/src/assignment_2_2022/scripts/node_b.py" line="63" column="1" bodyfile="/home/abbad/Documents/unige/researchtrack/rt2/assignment_2_2022/src/assignment_2_2022/scripts/node_b.py" bodystart="63" bodyend="78"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>.. module:: node_b
+   :platform: Unix
+   :synopsys: Documentation fro Node &quot;B&quot; from assignment 02 of RT1
+    
+..moduleauthor:: Aicha Manar ABBAD
+
+Node &apos;b&apos; implements a service to */reaching_goal/result* where it returns the number of reached or cancelled goals by the user.
+
+Subscribes to :
+    /reaching_goal/result
+    
+Service to :
+    /reach_cancel</verbatim> </para>
+    </detaileddescription>
+    <location file="/home/abbad/Documents/unige/researchtrack/rt2/assignment_2_2022/src/assignment_2_2022/scripts/node_b.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

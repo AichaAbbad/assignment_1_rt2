@@ -1,0 +1,161 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="namespacenode__c" kind="namespace" language="Python">
+    <compoundname>node_c</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacenode__c_1ac97890f725e75c2a7f2eb5513fd6c446" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float node_c.distance</definition>
+        <argsstring></argsstring>
+        <name>distance</name>
+        <initializer>=   0.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/abbad/Documents/unige/researchtrack/rt2/assignment_2_2022/src/assignment_2_2022/scripts/node_c.py" line="29" column="1" bodyfile="/home/abbad/Documents/unige/researchtrack/rt2/assignment_2_2022/src/assignment_2_2022/scripts/node_c.py" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacenode__c_1a85a245945c50b5499d6dec2f6045d387" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float node_c.begin_time</definition>
+        <argsstring></argsstring>
+        <name>begin_time</name>
+        <initializer>=  0.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/abbad/Documents/unige/researchtrack/rt2/assignment_2_2022/src/assignment_2_2022/scripts/node_c.py" line="30" column="1" bodyfile="/home/abbad/Documents/unige/researchtrack/rt2/assignment_2_2022/src/assignment_2_2022/scripts/node_c.py" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacenode__c_1a29f4200ce1f075106195692970ff106d" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float node_c.end_time</definition>
+        <argsstring></argsstring>
+        <name>end_time</name>
+        <initializer>=  0.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/abbad/Documents/unige/researchtrack/rt2/assignment_2_2022/src/assignment_2_2022/scripts/node_c.py" line="31" column="1" bodyfile="/home/abbad/Documents/unige/researchtrack/rt2/assignment_2_2022/src/assignment_2_2022/scripts/node_c.py" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacenode__c_1a5570c130d1f556da5d86f9373e5bd73a" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float node_c.velocity</definition>
+        <argsstring></argsstring>
+        <name>velocity</name>
+        <initializer>=  0.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/abbad/Documents/unige/researchtrack/rt2/assignment_2_2022/src/assignment_2_2022/scripts/node_c.py" line="32" column="1" bodyfile="/home/abbad/Documents/unige/researchtrack/rt2/assignment_2_2022/src/assignment_2_2022/scripts/node_c.py" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacenode__c_1aab908fa4b4db6dd699d4f514b5ab3c90" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def node_c.sub_callback</definition>
+        <argsstring>(data)</argsstring>
+        <name>sub_callback</name>
+        <param>
+          <type>data</type>
+          <defname>data</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>    *sub_callback()* is a callback function used for subsription to *&quot;position_and_velocity&quot;*.
+    It declared the global varialbles (*end_time*, *begin_time*, *distance*, and *velocity*) and 
+    call the *compute_distance()* function.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/abbad/Documents/unige/researchtrack/rt2/assignment_2_2022/src/assignment_2_2022/scripts/node_c.py" line="36" column="1" bodyfile="/home/abbad/Documents/unige/researchtrack/rt2/assignment_2_2022/src/assignment_2_2022/scripts/node_c.py" bodystart="36" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacenode__c_1a521dd0662e9bb4ea2e13ded0e8692d7a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def node_c.sub2_callback</definition>
+        <argsstring>(data)</argsstring>
+        <name>sub2_callback</name>
+        <param>
+          <type>data</type>
+          <defname>data</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>    *sub2_callback()* is a callback function used for subsription to *&quot;/reaching_goal/result&quot;*.
+    It declared the global varialbles (*end_time*, *begin_time*, *distance*, and *velocity*) and 
+    call the *compute_velocity()* function. After that it returns the *distance* to the goal and 
+    the average *velocity* of the robot.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/abbad/Documents/unige/researchtrack/rt2/assignment_2_2022/src/assignment_2_2022/scripts/node_c.py" line="49" column="1" bodyfile="/home/abbad/Documents/unige/researchtrack/rt2/assignment_2_2022/src/assignment_2_2022/scripts/node_c.py" bodystart="49" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacenode__c_1a41c3fa3643e5d2d8a007c7779ddc21cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def node_c.compute_distance</definition>
+        <argsstring>(data)</argsstring>
+        <name>compute_distance</name>
+        <param>
+          <type>data</type>
+          <defname>data</defname>
+        </param>
+        <briefdescription>
+<para>Function to compute the distance between the current position of the robot and goal position. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>    *compute_distance()* is a function used to compute the distance to the target.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/abbad/Documents/unige/researchtrack/rt2/assignment_2_2022/src/assignment_2_2022/scripts/node_c.py" line="67" column="1" bodyfile="/home/abbad/Documents/unige/researchtrack/rt2/assignment_2_2022/src/assignment_2_2022/scripts/node_c.py" bodystart="67" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacenode__c_1a7790df6455966558e9693fa562cb2461" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def node_c.compute_velocity</definition>
+        <argsstring>(data)</argsstring>
+        <name>compute_velocity</name>
+        <param>
+          <type>data</type>
+          <defname>data</defname>
+        </param>
+        <briefdescription>
+<para>The function to compute the average velocity of the robot. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>    *compute_velocity()* is a function used to compute the average velocity of the robot.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/abbad/Documents/unige/researchtrack/rt2/assignment_2_2022/src/assignment_2_2022/scripts/node_c.py" line="97" column="1" bodyfile="/home/abbad/Documents/unige/researchtrack/rt2/assignment_2_2022/src/assignment_2_2022/scripts/node_c.py" bodystart="97" bodyend="120"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>.. module:: node_c
+   :platform: Unix
+   :synopsys: Documentation fro Node &quot;C&quot; from assignment 02 of RT1
+    
+..moduleauthor:: Aicha Manar ABBAD
+
+Node &apos;c&apos; is used to compute the distance between the robot position and its final taget. Also used to compute the robot average velocity.
+
+Subscribes to :
+    /position_and_velocity
+    /reaching_goal/result</verbatim> </para>
+    </detaileddescription>
+    <location file="/home/abbad/Documents/unige/researchtrack/rt2/assignment_2_2022/src/assignment_2_2022/scripts/node_c.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

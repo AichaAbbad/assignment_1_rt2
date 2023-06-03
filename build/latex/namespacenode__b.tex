@@ -1,0 +1,59 @@
+\hypertarget{namespacenode__b}{}\doxysection{node\+\_\+b Namespace Reference}
+\label{namespacenode__b}\index{node\_b@{node\_b}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacenode__b_ab1613d9ff25c6970f8d29a118504152d}{sub\+\_\+callback}} (data)
+\item 
+def \mbox{\hyperlink{namespacenode__b_a052d2a0326697e5c473d4dc9e4848e01}{srv\+\_\+callback}} (req)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacenode__b_a157c11e4259dd02a2498d2941cd6fc4e}\label{namespacenode__b_a157c11e4259dd02a2498d2941cd6fc4e}} 
+int {\bfseries reached\+\_\+goals} = 0
+\item 
+\mbox{\Hypertarget{namespacenode__b_a199d07f6092f5134dac96620ad3eb115}\label{namespacenode__b_a199d07f6092f5134dac96620ad3eb115}} 
+int {\bfseries canceled\+\_\+goals} = 0
+\item 
+\mbox{\Hypertarget{namespacenode__b_a6e2b08c821278aa0fe1e92dd83a7f310}\label{namespacenode__b_a6e2b08c821278aa0fe1e92dd83a7f310}} 
+{\bfseries service} = rospy.\+Service(\char`\"{}reach\+\_\+cancel\char`\"{}, Empty, \mbox{\hyperlink{namespacenode__b_a052d2a0326697e5c473d4dc9e4848e01}{srv\+\_\+callback}})
+\item 
+\mbox{\Hypertarget{namespacenode__b_a47cbdef551028f153f5457ceb6b74c25}\label{namespacenode__b_a47cbdef551028f153f5457ceb6b74c25}} 
+{\bfseries subscribe} = rospy.\+Subscriber(\textquotesingle{}/reaching\+\_\+goal/result\textquotesingle{}, assignment\+\_\+2\+\_\+2022.\+msg.\+Planning\+Action\+Result, \mbox{\hyperlink{namespacenode__b_ab1613d9ff25c6970f8d29a118504152d}{sub\+\_\+callback}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}.. module:: node_b
+   :platform: Unix
+   :synopsys: Documentation fro Node "B" from assignment 02 of RT1
+    
+..moduleauthor:: Aicha Manar ABBAD
+
+Node 'b' implements a service to */reaching_goal/result* where it returns the number of reached or cancelled goals by the user.
+
+Subscribes to :
+    /reaching_goal/result
+    
+Service to :
+    /reach_cancel\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacenode__b_a052d2a0326697e5c473d4dc9e4848e01}\label{namespacenode__b_a052d2a0326697e5c473d4dc9e4848e01}} 
+\index{node\_b@{node\_b}!srv\_callback@{srv\_callback}}
+\index{srv\_callback@{srv\_callback}!node\_b@{node\_b}}
+\doxysubsubsection{\texorpdfstring{srv\_callback()}{srv\_callback()}}
+{\footnotesize\ttfamily def node\+\_\+b.\+srv\+\_\+callback (\begin{DoxyParamCaption}\item[{}]{req }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}    *srv_callback()* is a service callback function that returns the number or reached and canceled goals.\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacenode__b_ab1613d9ff25c6970f8d29a118504152d}\label{namespacenode__b_ab1613d9ff25c6970f8d29a118504152d}} 
+\index{node\_b@{node\_b}!sub\_callback@{sub\_callback}}
+\index{sub\_callback@{sub\_callback}!node\_b@{node\_b}}
+\doxysubsubsection{\texorpdfstring{sub\_callback()}{sub\_callback()}}
+{\footnotesize\ttfamily def node\+\_\+b.\+sub\+\_\+callback (\begin{DoxyParamCaption}\item[{}]{data }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}    *sub_callbacl()* is a callback function that checks the status of the robot
+    to see if the robot reached its goaled or if is cancelled.\end{DoxyVerb}
+ 

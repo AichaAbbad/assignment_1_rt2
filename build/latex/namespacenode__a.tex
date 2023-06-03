@@ -1,0 +1,103 @@
+\hypertarget{namespacenode__a}{}\doxysection{node\+\_\+a Namespace Reference}
+\label{namespacenode__a}\index{node\_a@{node\_a}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacenode__a_a2254d490c559ac64f332eee48791dbf2}{sub\+\_\+callback}} (data)
+\item 
+def \mbox{\hyperlink{namespacenode__a_a0a9c719d9689d51f632abb2005241b5a}{publish\+\_\+msg}} (costum\+\_\+msg)
+\item 
+def \mbox{\hyperlink{namespacenode__a_a82aa5f081a32f2cdef8af0acc5db7f16}{set\+\_\+target}} ()
+\item 
+def \mbox{\hyperlink{namespacenode__a_a9f3df595d8c0b82a72e888808cbd7f22}{cancel\+\_\+target}} ()
+\item 
+def \mbox{\hyperlink{namespacenode__a_a81f326853ce1d835e0bc9ed2a2a7c383}{wrong\+\_\+target}} ()
+\item 
+def \mbox{\hyperlink{namespacenode__a_af94178204c08c6d9e2502abc86b943fc}{main}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacenode__a_a396883975a6f57d8c7a6962f11358e0e}\label{namespacenode__a_a396883975a6f57d8c7a6962f11358e0e}} 
+{\bfseries client} = actionlib.\+Simple\+Action\+Client(\textquotesingle{}/reaching\+\_\+goal\textquotesingle{},assignment\+\_\+2\+\_\+2022.\+msg.\+Planning\+Action)
+\item 
+\mbox{\Hypertarget{namespacenode__a_ac1c1a0cd1ea3358552b9a360895ab388}\label{namespacenode__a_ac1c1a0cd1ea3358552b9a360895ab388}} 
+{\bfseries Odometry\+\_\+sub} = rospy.\+Subscriber(\char`\"{}/odom\char`\"{}, Odometry,\mbox{\hyperlink{namespacenode__a_a2254d490c559ac64f332eee48791dbf2}{sub\+\_\+callback}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}.. module:: node_a
+   :platform: Unix
+   :synopsys: Documentation fro Node "A" from assignment 02 of RT1
+    
+..moduleauthor:: Aicha Manar ABBAD
+
+Node 'a' implements an action client that allows the user to set a goal or cancel it.
+It also publishes the velocity as a costum message based on the values published in
+the '/odom' topic.
+
+Subscribes to :
+    /odom
+
+Publishes to :
+    /position_and_velocity
+    
+ActionClient to :
+    /reaching_goal\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacenode__a_a9f3df595d8c0b82a72e888808cbd7f22}\label{namespacenode__a_a9f3df595d8c0b82a72e888808cbd7f22}} 
+\index{node\_a@{node\_a}!cancel\_target@{cancel\_target}}
+\index{cancel\_target@{cancel\_target}!node\_a@{node\_a}}
+\doxysubsubsection{\texorpdfstring{cancel\_target()}{cancel\_target()}}
+{\footnotesize\ttfamily def node\+\_\+a.\+cancel\+\_\+target (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}    *cancel_target()* is a function used to cancel the target set by the user.\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacenode__a_af94178204c08c6d9e2502abc86b943fc}\label{namespacenode__a_af94178204c08c6d9e2502abc86b943fc}} 
+\index{node\_a@{node\_a}!main@{main}}
+\index{main@{main}!node\_a@{node\_a}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily def node\+\_\+a.\+main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}    *main()* is the main function of the program. It serves as a user interface
+    where the client can choose one of the three options : 
+        *1. Target :* to input the desired target.
+        *2. Cancel :* to cancel the target.
+        *3. Exit :* to exit the program\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacenode__a_a0a9c719d9689d51f632abb2005241b5a}\label{namespacenode__a_a0a9c719d9689d51f632abb2005241b5a}} 
+\index{node\_a@{node\_a}!publish\_msg@{publish\_msg}}
+\index{publish\_msg@{publish\_msg}!node\_a@{node\_a}}
+\doxysubsubsection{\texorpdfstring{publish\_msg()}{publish\_msg()}}
+{\footnotesize\ttfamily def node\+\_\+a.\+publish\+\_\+msg (\begin{DoxyParamCaption}\item[{}]{costum\+\_\+msg }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}    *publish_msg()* is a function for publishing odometry data.
+    It publishes the current odometry data in in *"/position_and_velocity"*\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacenode__a_a82aa5f081a32f2cdef8af0acc5db7f16}\label{namespacenode__a_a82aa5f081a32f2cdef8af0acc5db7f16}} 
+\index{node\_a@{node\_a}!set\_target@{set\_target}}
+\index{set\_target@{set\_target}!node\_a@{node\_a}}
+\doxysubsubsection{\texorpdfstring{set\_target()}{set\_target()}}
+{\footnotesize\ttfamily def node\+\_\+a.\+set\+\_\+target (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}    *set_target()* is a function used to ask the user to inter the target goal.
+    This function allows the user to inter the desired goal it wants to reach
+    and send it to the client server.\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacenode__a_a2254d490c559ac64f332eee48791dbf2}\label{namespacenode__a_a2254d490c559ac64f332eee48791dbf2}} 
+\index{node\_a@{node\_a}!sub\_callback@{sub\_callback}}
+\index{sub\_callback@{sub\_callback}!node\_a@{node\_a}}
+\doxysubsubsection{\texorpdfstring{sub\_callback()}{sub\_callback()}}
+{\footnotesize\ttfamily def node\+\_\+a.\+sub\+\_\+callback (\begin{DoxyParamCaption}\item[{}]{data }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}    *sub_callback()* is a callback function. It gets the current 
+    odometry data from *"/odom"* and publish it using costum messages
+    in *"/position_and_velocity"*.\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacenode__a_a81f326853ce1d835e0bc9ed2a2a7c383}\label{namespacenode__a_a81f326853ce1d835e0bc9ed2a2a7c383}} 
+\index{node\_a@{node\_a}!wrong\_target@{wrong\_target}}
+\index{wrong\_target@{wrong\_target}!node\_a@{node\_a}}
+\doxysubsubsection{\texorpdfstring{wrong\_target()}{wrong\_target()}}
+{\footnotesize\ttfamily def node\+\_\+a.\+wrong\+\_\+target (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}    *wrong_target()* is a function used to inform the user in case he inputs
+    a wrong target.\end{DoxyVerb}
+ 

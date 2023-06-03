@@ -1,0 +1,87 @@
+\hypertarget{namespacenode__c}{}\doxysection{node\+\_\+c Namespace Reference}
+\label{namespacenode__c}\index{node\_c@{node\_c}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacenode__c_aab908fa4b4db6dd699d4f514b5ab3c90}{sub\+\_\+callback}} (data)
+\item 
+def \mbox{\hyperlink{namespacenode__c_a521dd0662e9bb4ea2e13ded0e8692d7a}{sub2\+\_\+callback}} (data)
+\item 
+def \mbox{\hyperlink{namespacenode__c_a41c3fa3643e5d2d8a007c7779ddc21cf}{compute\+\_\+distance}} (data)
+\begin{DoxyCompactList}\small\item\em Function to compute the distance between the current position of the robot and goal position. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespacenode__c_a7790df6455966558e9693fa562cb2461}{compute\+\_\+velocity}} (data)
+\begin{DoxyCompactList}\small\item\em The function to compute the average velocity of the robot. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacenode__c_ac97890f725e75c2a7f2eb5513fd6c446}\label{namespacenode__c_ac97890f725e75c2a7f2eb5513fd6c446}} 
+float {\bfseries distance} = 0.\+0
+\item 
+\mbox{\Hypertarget{namespacenode__c_a85a245945c50b5499d6dec2f6045d387}\label{namespacenode__c_a85a245945c50b5499d6dec2f6045d387}} 
+float {\bfseries begin\+\_\+time} = 0.\+0
+\item 
+\mbox{\Hypertarget{namespacenode__c_a29f4200ce1f075106195692970ff106d}\label{namespacenode__c_a29f4200ce1f075106195692970ff106d}} 
+float {\bfseries end\+\_\+time} = 0.\+0
+\item 
+\mbox{\Hypertarget{namespacenode__c_a5570c130d1f556da5d86f9373e5bd73a}\label{namespacenode__c_a5570c130d1f556da5d86f9373e5bd73a}} 
+float {\bfseries velocity} = 0.\+0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}.. module:: node_c
+   :platform: Unix
+   :synopsys: Documentation fro Node "C" from assignment 02 of RT1
+    
+..moduleauthor:: Aicha Manar ABBAD
+
+Node 'c' is used to compute the distance between the robot position and its final taget. Also used to compute the robot average velocity.
+
+Subscribes to :
+    /position_and_velocity
+    /reaching_goal/result\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacenode__c_a41c3fa3643e5d2d8a007c7779ddc21cf}\label{namespacenode__c_a41c3fa3643e5d2d8a007c7779ddc21cf}} 
+\index{node\_c@{node\_c}!compute\_distance@{compute\_distance}}
+\index{compute\_distance@{compute\_distance}!node\_c@{node\_c}}
+\doxysubsubsection{\texorpdfstring{compute\_distance()}{compute\_distance()}}
+{\footnotesize\ttfamily def node\+\_\+c.\+compute\+\_\+distance (\begin{DoxyParamCaption}\item[{}]{data }\end{DoxyParamCaption})}
+
+
+
+Function to compute the distance between the current position of the robot and goal position. 
+
+\begin{DoxyVerb}    *compute_distance()* is a function used to compute the distance to the target.\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacenode__c_a7790df6455966558e9693fa562cb2461}\label{namespacenode__c_a7790df6455966558e9693fa562cb2461}} 
+\index{node\_c@{node\_c}!compute\_velocity@{compute\_velocity}}
+\index{compute\_velocity@{compute\_velocity}!node\_c@{node\_c}}
+\doxysubsubsection{\texorpdfstring{compute\_velocity()}{compute\_velocity()}}
+{\footnotesize\ttfamily def node\+\_\+c.\+compute\+\_\+velocity (\begin{DoxyParamCaption}\item[{}]{data }\end{DoxyParamCaption})}
+
+
+
+The function to compute the average velocity of the robot. 
+
+\begin{DoxyVerb}    *compute_velocity()* is a function used to compute the average velocity of the robot.\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacenode__c_a521dd0662e9bb4ea2e13ded0e8692d7a}\label{namespacenode__c_a521dd0662e9bb4ea2e13ded0e8692d7a}} 
+\index{node\_c@{node\_c}!sub2\_callback@{sub2\_callback}}
+\index{sub2\_callback@{sub2\_callback}!node\_c@{node\_c}}
+\doxysubsubsection{\texorpdfstring{sub2\_callback()}{sub2\_callback()}}
+{\footnotesize\ttfamily def node\+\_\+c.\+sub2\+\_\+callback (\begin{DoxyParamCaption}\item[{}]{data }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}    *sub2_callback()* is a callback function used for subsription to *"/reaching_goal/result"*.
+    It declared the global varialbles (*end_time*, *begin_time*, *distance*, and *velocity*) and 
+    call the *compute_velocity()* function. After that it returns the *distance* to the goal and 
+    the average *velocity* of the robot.\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacenode__c_aab908fa4b4db6dd699d4f514b5ab3c90}\label{namespacenode__c_aab908fa4b4db6dd699d4f514b5ab3c90}} 
+\index{node\_c@{node\_c}!sub\_callback@{sub\_callback}}
+\index{sub\_callback@{sub\_callback}!node\_c@{node\_c}}
+\doxysubsubsection{\texorpdfstring{sub\_callback()}{sub\_callback()}}
+{\footnotesize\ttfamily def node\+\_\+c.\+sub\+\_\+callback (\begin{DoxyParamCaption}\item[{}]{data }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}    *sub_callback()* is a callback function used for subsription to *"position_and_velocity"*.
+    It declared the global varialbles (*end_time*, *begin_time*, *distance*, and *velocity*) and 
+    call the *compute_distance()* function.\end{DoxyVerb}
+ 
