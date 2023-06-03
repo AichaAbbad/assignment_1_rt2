@@ -20,7 +20,7 @@ subprocess.call('doxygen ../Doxyfile.in', shell=True)
 
 # -- Project information -----------------------------------------------------
 
-project = 'assignment1_rt2'
+project = 'assignment_2_2022'
 copyright = '2023, aicha manar abbad'
 author = 'aicha manar abbad'
 
@@ -81,9 +81,9 @@ intersphinx_mapping={'https://docs.python.org/':None}
 # -- Option for breathe ------------------------------------------------------
 
 breathe_projects={
-	"assignment1_rt2":"../build/xml/"
+	"assignment_2_2022":"../build/xml/"
 }
-breathe_default_project="assignment1_rt2"
+breathe_default_project="assignment_2_2022"
 breathe_default_members=('members','undoc-members')
 
 
