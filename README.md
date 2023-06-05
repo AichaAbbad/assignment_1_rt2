@@ -29,7 +29,8 @@ git clone https://github.com/AichaAbbad/assignment_1_rt2.git
 ```bash
 cd assignment_1_rt2
 ```
-3. Generate the "html file":
+3. Generate the html file:
 ```bash
 make html
 ```
+4. Navigate into the html file inside the build file and select the __index.html__ to see the html page.
