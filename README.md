@@ -40,6 +40,7 @@ make html
 ## Directory Structure
 
 The repository has the following structure:
+```bash
 .
 
 ├── docs
@@ -61,6 +62,7 @@ The repository has the following structure:
 ├── node_c.py
 
 └── requirements.txt
+```
 
 * __node_a.py:__ Python script for node A.
 * __node_b.py:__ Python script for node B.
