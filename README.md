@@ -42,14 +42,23 @@ make html
 The repository has the following structure:
 .
 ├── docs
+
 │   ├── _build
+
 │   ├── _static
+
 │   ├── _templates
+
 │   ├── conf.py
+
 │   └── index.rst
+
 ├── node_a.py
+
 ├── node_b.py
+
 ├── node_c.py
+
 └── requirements.txt
 
 * __node_a.py:__ Python script for node A.
