@@ -41,6 +41,7 @@ make html
 
 The repository has the following structure:
 .
+
 ├── docs
 
 │   ├── _build
