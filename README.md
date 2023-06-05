@@ -30,6 +30,6 @@ git clone https://github.com/AichaAbbad/assignment_1_rt2.git
 cd assignment_1_rt2
 ```
 3. Generate the "html file":
-``bash
+```bash
 make html
 ```
